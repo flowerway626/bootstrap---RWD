@@ -1,0 +1,185 @@
+:root {
+  --archito: #9c4f22;
+  --dark: #252525;
+  --gray: #5c5c5c;
+}
+* {
+  transition: 0.9s;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+/* 選取高亮 */
+::selection {
+  color: #fff;
+  background: var(--archito);
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.row {
+  display: flex;
+}
+
+#top {
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 1;
+  box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+#top .row {
+  width: 95%;
+  height: 90px;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#top .col img {
+  width: 20%;
+}
+
+#top .col a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+/* ------- ABOUT US ------- */
+
+#aboutUs {
+  background: #fff;
+  margin: 3rem 0;
+}
+
+#aboutUs .col {
+  width: 50%;
+}
+
+#aboutUs #left {
+  padding-right: 70px;
+  line-height: 30px;
+  color: var(--gray);
+}
+
+#aboutUs #left h1 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color: var(--dark);
+  margin: 0;
+}
+
+#aboutUs #left h3 {
+  color: var(--archito);
+  font-style: italic;
+  letter-spacing: 2px;
+  font-family: 'Poppins';
+  margin: 0;
+}
+
+#aboutUs #left h4 {
+  font-style: italic;
+  font-weight: 600;
+  font-family: 'Roboto Slab';
+}
+
+#aboutUs #left button {
+  font-size: 18px;
+  color: #fff;
+  padding: 0.7rem 1.7rem;
+  border: var(--archito);
+  background: var(--archito);
+}
+
+#aboutUs #left button:hover {
+  cursor: pointer;
+  background: #fff;
+  color: var(--archito);
+  border: 2px solid var(--archito);
+}
+
+#aboutUs #left #aboutNum {
+  display: flex;
+  justify-content: space-around;
+}
+
+#aboutUs #aboutNum span {
+  color: var(--dark);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#aboutUs #right #area {
+  width: 600px;
+  height: 750px;
+  position: relative;
+}
+
+#aboutUs #right #big {
+  width: 100%;
+  height: 100%;
+}
+
+#aboutUs #right #line {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#aboutUs #right #little {
+  width: 45%;
+  transform: rotate(15deg);
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  z-index: 1;
+}
+
+#aboutUs #right #line::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid #fff;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+#aboutUs #right #line::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid #fff;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
