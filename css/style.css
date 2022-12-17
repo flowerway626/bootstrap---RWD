@@ -1,15 +1,11 @@
-:root {
-  --archito: #9c4f22;
-  --dark: #252525;
-  --gray: #5c5c5c;
-}
 * {
-  transition: 0.9s;
+  /* transition: 0.9s; */
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
+  color: #5c5c5c;
   width: 100vw;
   height: 100vh;
   padding: 0;
@@ -18,28 +14,32 @@ body {
 
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
   font-family: 'Roboto Slab', serif;
+  color: #252525;
+}
+
+h3 {
+  color: #9c4f22;
+  font-style: italic;
+  font-family: 'Poppins';
+  font-weight: 600;
+  margin: 0;
 }
 
 /* 選取高亮 */
 ::selection {
   color: #fff;
-  background: var(--archito);
+  background: #9c4f22;
 }
 
 .container {
-  width: 90%;
+  width: 95%;
   height: 100%;
+  padding: 100px 0;
   margin: auto;
-  padding-top: 100px;
-}
-
-.row {
-  display: flex;
 }
 
 #top {
@@ -47,58 +47,58 @@ h6 {
   position: fixed;
   background: #fff;
   z-index: 1;
+  top: 0;
   box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
 }
 
 #top .row {
   width: 95%;
-  height: 90px;
+  height: 80px;
+  display: flex;
   margin: auto;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
+#top .fa-bars::before {
+  display: block;
+}
+
 #top .col img {
-  width: 20%;
+  padding: 15px;
+  width: 100px;
+}
+
+#top .col li {
+  display: none;
 }
 
 #top .col a {
   text-decoration: none;
-  color: var(--dark);
+  color: #252525;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 1px;
 }
 
 /* ------- ABOUT US ------- */
-
 #aboutUs {
   background: #fff;
   margin: 3rem 0;
 }
 
-#aboutUs .col {
-  width: 50%;
+#aboutUs .row {
+  flex-direction: column-reverse;
 }
 
 #aboutUs #left {
   padding-right: 70px;
   line-height: 30px;
-  color: var(--gray);
 }
 
 #aboutUs #left h1 {
   font-size: 2.5rem;
   line-height: 1.5;
-  color: var(--dark);
-  margin: 0;
-}
-
-#aboutUs #left h3 {
-  color: var(--archito);
-  font-style: italic;
-  letter-spacing: 2px;
-  font-family: 'Poppins';
   margin: 0;
 }
 
@@ -108,29 +108,39 @@ h6 {
   font-family: 'Roboto Slab';
 }
 
+#aboutUs #left #aboutNum {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
 #aboutUs #left button {
   font-size: 18px;
   color: #fff;
   padding: 0.7rem 1.7rem;
-  border: var(--archito);
-  background: var(--archito);
+  border: #9c4f22;
+  background: #9c4f22;
 }
 
 #aboutUs #left button:hover {
   cursor: pointer;
   background: #fff;
-  color: var(--archito);
-  border: 2px solid var(--archito);
+  color: #9c4f22;
+  border: 2px solid #9c4f22;
 }
 
-#aboutUs #left #aboutNum {
+#aboutUs #left #aboutNum > * {
   display: flex;
-  justify-content: space-around;
+  color: #252525;
+}
+
+#aboutUs #aboutNum i {
+  color: #9c4f22;
+  font-size: 28px;
 }
 
 #aboutUs #aboutNum span {
-  color: var(--dark);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -182,4 +192,113 @@ h6 {
   position: absolute;
   bottom: 25px;
   right: 25px;
+}
+
+/* -------Service ------- */
+
+#service {
+  background: #e6e6e6;
+}
+#service .row {
+  align-items: center;
+}
+
+#service #left {
+  padding: 50px 100px 50px 15px;
+}
+#service #left h1 {
+  font-weight: 500;
+  font-size: 40px;
+}
+
+#service #left button {
+  font-size: 18px;
+  padding: 0.7rem 1.7rem;
+  border: 1px solid #9c4f22;
+  color: #9c4f22;
+  background: #e6e6e6;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+#service #left button:hover {
+  border: #9c4f22;
+  background: #9c4f22;
+  color: #fff;
+}
+
+#service #right .card {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #9c4f2255;
+  border-radius: 10px;
+  transition: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#service .card:hover {
+  background: linear-gradient(45deg, #fb4801 0%, #914b22 100%);
+  color: #fff;
+}
+
+#service .card i:not(#service .card a i) {
+  color: #9c4f22;
+  font-size: 40px;
+  display: block;
+}
+
+#service .card a {
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  color: #9c4f22;
+}
+
+/* ------- RWD ------- */
+@media (min-width: 768px) {
+  #service #right {
+    display: flex;
+  }
+
+  #service #right .card {
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .row {
+    display: flex;
+  }
+
+  #top .col img {
+    margin-right: 10px;
+  }
+
+  #top .col li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  #top .fa-bars::before {
+    display: none;
+  }
+
+  /* ------- ABOUT US ------- */
+
+  #aboutUs .col {
+    width: 50%;
+  }
+
+  /* -------Service ------- */
+
+  #service #right .col:first-child {
+    margin-top: 50px;
+  }
 }

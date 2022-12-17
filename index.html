@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/all.css">
+  <link rel="stylesheet" href="./css/rwd.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
@@ -22,27 +25,36 @@
         <a href="#">
           <img src="https://flexcode.xyz/archito/assets/images/logo/logo-dark-wide.png" alt=""></a>
       </div>
-      <div class="col"><a href="#">Home</a></div>
-      <div class="col"><a href="#">About Us</a></div>
-      <div class="col"><a href="#">Service</a></div>
-      <div class="col"><a href="#">Portfoilo</a></div>
-      <div class="col"><a href="#">Blog</a></div>
-      <div class="col"><a href="#">Pages</a></div>
-      <div class="col"><a href="#">Contact Us</a></div>
-      <div class="col"><a href="#"></a></div>
+      <div class="col">
+        <ul>
+          <li><a href="#">Home <i class="fa-solid fa-chevron-down"></i></a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Service <i class="fa-solid fa-chevron-down"></i></a></li>
+          <li><a href="#">Portfoilo <i class="fa-solid fa-chevron-down"></i></a></li>
+          <li><a href="#">Blog <i class="fa-solid fa-chevron-down"></i></a></li>
+          <li><a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#"><i class="fa-solid fa-2x fa-magnifying-glass"></i></a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <a href="#"><i class="fa-solid fa-2x fa-bars"></i></a>
+      </div>
     </div>
   </section>
 
-  <div class="container">
-    <!-- 輪播 1 -->
+  <!-- 輪播 1 -->
 
-    <!-- 輪播 2 -->
+  <!-- 輪播 2 -->
 
-    <!-- About Us -->
-    <section id="aboutUs">
+  <!-- About Us -->
+  <section id="aboutUs">
+    <div class="container">
       <div class="row">
-        <div id="left" class="col">
-          <h3>ABOUT US</h3>
+        <div id="left" class="col animate__animated animate__fadeInUp animate__delay-1s">
+          <h3><i class="fa-sharp fa-solid fa-square fa-2xs"></i> ABOUT US <i
+              class="fa-sharp fa-solid fa-square fa-2xs"></i>
+          </h3>
           <h1>Have A Closer Look At Our Done Works</h1>
           <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquam est! rerum inventore animi
             at
@@ -52,22 +64,31 @@
             totam sunt accusamus quia fugiat quasi</p>
           <div id="aboutNum">
             <div id="project">
-              <span>700</span>
-              <p>PROJECTS</p>
+              <i class="fa-sharp fa-solid fa-plus fa-3"></i>
+              <div>
+                <span>700</span>
+                <p>PROJECTS</p>
+              </div>
             </div>
             <div id="clients">
-              <span>900</span>
-              <p>CLIENTS</p>
+              <i class="fa-sharp fa-solid fa-plus"></i>
+              <div>
+                <span>900</span>
+                <p>CLIENTS</p>
+              </div>
             </div>
             <div id="hours">
-              <span>980</span>
-              <p>HOURS</p>
+              <i class="fa-sharp fa-solid fa-plus"></i>
+              <div>
+                <span>980</span>
+                <p>HOURS</p>
+              </div>
             </div>
           </div>
           <button>Learn More</button>
         </div>
 
-        <div id="right" class="col">
+        <div id="right" class="col animate__animated animate__fadeInUp">
           <div id="area">
             <img id="big" src="https://flexcode.xyz/archito/assets/images/about/2.jpg" alt="">
             <img id="little" src="https://flexcode.xyz/archito/assets/images/about/seal-logo.png" alt="">
@@ -75,13 +96,52 @@
           </div>
         </div>
       </div>
-
-      <section id="Service">
-
-      </section>
-  </div>
+    </div>
   </section>
-  </div>
+
+  <section id="service">
+    <div class="container">
+      <div class="row">
+        <div id="left" class="col">
+          <h3><i class="fa-sharp fa-solid fa-square fa-2xs"></i> OUR SERVICES <i
+              class="fa-sharp fa-solid fa-square fa-2xs"></i></h3>
+          <h1>Services You Will Get By Joining Us.</h1>
+          <button>See All Services</button>
+        </div>
+
+        <div id="right" class="col">
+          <div class="col">
+            <div class="card">
+              <p><i class="fa-solid fa-pen-ruler"></i></p>
+              <h2>Creative Solutions</h2>
+              <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
+              <p><a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a></p>
+            </div>
+            <div class="card">
+              <i class="fa-solid fa-compass-drafting"></i>
+              <h2>Solid Development</h2>
+              <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
+              <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <i class="fa-solid fa-layer-group"></i>
+              <h2>Awesome Designs</h2>
+              <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
+              <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="card">
+              <i class="fa-solid fa-couch"></i>
+              <h2>High-End Appearance</h2>
+              <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
+              <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
