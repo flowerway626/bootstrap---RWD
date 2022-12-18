@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/all.css">
-  <link rel="stylesheet" href="./css/rwd.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -18,6 +17,7 @@
 </head>
 
 <body>
+  <a href="#" id="arrowUp"><i class="fa-solid fa-arrow-up"></i></a>
   <!-- 頂端 -->
   <section id="top">
     <div class="row">
@@ -52,8 +52,7 @@
     <div class="container">
       <div class="row">
         <div id="left" class="col animate__animated animate__fadeInUp animate__delay-1s">
-          <h3><i class="fa-sharp fa-solid fa-square fa-2xs"></i> ABOUT US <i
-              class="fa-sharp fa-solid fa-square fa-2xs"></i>
+          <h3><i class="fa-sharp fa-solid fa-square"></i> ABOUT US <i class="fa-sharp fa-solid fa-square"></i>
           </h3>
           <h1>Have A Closer Look At Our Done Works</h1>
           <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquam est! rerum inventore animi
@@ -102,7 +101,7 @@
   <section id="service">
     <div class="container">
       <div class="row">
-        <div id="left" class="col">
+        <div id="left" class="col ">
           <h3><i class="fa-sharp fa-solid fa-square fa-2xs"></i> OUR SERVICES <i
               class="fa-sharp fa-solid fa-square fa-2xs"></i></h3>
           <h1>Services You Will Get By Joining Us.</h1>
@@ -111,13 +110,13 @@
 
         <div id="right" class="col">
           <div class="col">
-            <div class="card">
+            <div class="card animate__animated animate__fadeInUp animate__delay-1s">
               <p><i class="fa-solid fa-pen-ruler"></i></p>
               <h2>Creative Solutions</h2>
               <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
               <p><a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a></p>
             </div>
-            <div class="card">
+            <div class="card animate__animated animate__fadeInUp animate__delay-1s">
               <i class="fa-solid fa-compass-drafting"></i>
               <h2>Solid Development</h2>
               <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
@@ -125,13 +124,13 @@
             </div>
           </div>
           <div class="col">
-            <div class="card">
+            <div class="card animate__animated animate__fadeInUp animate__delay-1s">
               <i class="fa-solid fa-layer-group"></i>
               <h2>Awesome Designs</h2>
               <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
               <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <div class="card">
+            <div class="card animate__animated animate__fadeInUp animate__delay-1s">
               <i class="fa-solid fa-couch"></i>
               <h2>High-End Appearance</h2>
               <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
@@ -139,6 +138,115 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Talanted Team Members -->
+  <section id="members">
+    <div class="container">
+      <h1>Talanted Team Members</h1>
+      <div id="symbol">
+        <i class="fa-solid fa-minus fa-2xs"></i> <i class="fa-sharp fa-solid fa-square fa-2xs"></i> <i
+          class="fa-solid fa-minus fa-2xs"></i>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <img src="https://flexcode.xyz/archito/assets/images/our-team/1.jpg" alt="">
+            <h3>Ahmed Aly</h3>
+            <p>Founder</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://flexcode.xyz/archito/assets/images/our-team/2.jpg" alt="">
+            <h3>Fairouz Amin</h3>
+            <p>Designer</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://flexcode.xyz/archito/assets/images/our-team/3.jpg" alt="">
+            <div id="area"></div>
+            <div id="socialMedia">
+              <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a>
+            </div>
+            <h3>Allan Smith</h3>
+            <p>Manager</p>
+          </div>
+        </div>
+      </div>
+      <button>See All Team Members</button>
+    </div>
+  </section>
+
+  <!-- QA -->
+  <section id="questions">
+    <div id="area">
+      <div class="container">
+        <h1>Still Have More Questions?</h1>
+        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Sunt, Architecto Cupiditate Odio Rerum Est</p>
+        <div id="symbol">
+          <i class="fa-solid fa-minus fa-2x"></i> <i class="fa-solid fa-square fa-2xs"></i> <i
+            class="fa-solid fa-minus fa-2x"></i>
+        </div>
+        <button>Get In Touch</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section id="footer">
+    <i class="fa-solid fa-pipe"></i>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>About Archito</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Voluptatibus facere modi possimus dignissimos,
+            aliquam nobis eaque? Voluptatem magnam quisquam rem.</p>
+          <div id="socialMedia">
+            <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#"> Google</a></li>
+            <li><a href="#"> Dribbble</a></li>
+            <li><a href="#"> LinkedIn</a></li>
+            <li><a href="#"> Wikipiddia</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#"> Support</a></li>
+            <li><a href="#"> Dashboard</a></li>
+            <li><a href="#"> Drivers</a></li>
+            <li><a href="#"> Project</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Contact Information</h3>
+          <ul>
+            <li><i class="fa-solid fa-earth-americas"></i> www.yoursite.com</li>
+            <li><i class="fa-solid fa-envelope"></i> example@support.com</li>
+            <li><i class="fa-solid fa-location-dot"></i> 5 xyz st., abc, alexandria, egypt.</li>
+            <li><i class="fa-solid fa-mobile-screen-button"></i> +20123456789</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <p id="copyright">© 2020 Created by: mhmd amin</p>
+        <p><a href="#"> Terms of Use</a> <i class="fa-solid fa-pipe" style="color: #fff;"></i> <a href="#"> Privacy
+            Policy</a></p>
       </div>
     </div>
   </section>

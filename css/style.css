@@ -1,15 +1,16 @@
 * {
-  /* transition: 0.9s; */
+  transition: 0.9s;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   color: #5c5c5c;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1,
@@ -29,7 +30,29 @@ h3 {
   margin: 0;
 }
 
-/* 選取高亮 */
+button {
+  font-size: 18px;
+  padding: 0.7rem 1.7rem;
+  font-family: 'Poppins';
+  font-weight: 500;
+}
+
+#symbol {
+  color: #914b22;
+}
+
+#socialMedia i {
+  padding: 10px;
+  color: #fff;
+  background: #914f22;
+}
+
+#socialMedia i:hover {
+  background: #fff;
+  color: #914b22;
+}
+
+/* 選取 */
 ::selection {
   color: #fff;
   background: #9c4f22;
@@ -42,6 +65,25 @@ h3 {
   margin: auto;
 }
 
+#arrowUp {
+  width: 45px;
+  height: 45px;
+  background: #914b22;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  padding: 6px;
+  bottom: 30px;
+  right: 30px;
+  font-size: 25px;
+  z-index: 1;
+}
+
+#arrowUp:hover {
+  background: #914b2299;
+}
+
+/* ------- 頂端 ------- */
 #top {
   width: 100%;
   position: fixed;
@@ -88,6 +130,7 @@ h3 {
 }
 
 #aboutUs .row {
+  display: flex;
   flex-direction: column-reverse;
 }
 
@@ -115,9 +158,7 @@ h3 {
 }
 
 #aboutUs #left button {
-  font-size: 18px;
   color: #fff;
-  padding: 0.7rem 1.7rem;
   border: #9c4f22;
   background: #9c4f22;
 }
@@ -212,8 +253,6 @@ h3 {
 }
 
 #service #left button {
-  font-size: 18px;
-  padding: 0.7rem 1.7rem;
   border: 1px solid #9c4f22;
   color: #9c4f22;
   background: #e6e6e6;
@@ -258,6 +297,184 @@ h3 {
   color: #9c4f22;
 }
 
+/* ------- Talanted Team Members ------- */
+#members {
+  text-align: center;
+}
+
+#members h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+#members #symbol {
+  color: #914f22;
+  text-align: center;
+  font-size: 40px;
+}
+
+#members .col {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+}
+
+#members .card {
+  position: relative;
+  text-align: left;
+}
+
+#members #area {
+  width: 100%;
+  height: 405px;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* display: none; */
+}
+
+#members img {
+  width: 100%;
+  height: 100%;
+}
+
+#members h3 {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+#members p {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+#members #socialMedia {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 90px;
+  /* display: none; */
+}
+
+#members #socialMedia i {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+#members button {
+  color: #fff;
+  background: #914b22;
+  border: 2px solid #914b22;
+  margin: 20px;
+}
+
+#members button:hover {
+  color: #914b22;
+  background: #fff;
+}
+
+/* ------- QA ------- */
+#questions {
+  text-align: center;
+  background: url('https://flexcode.xyz/archito/assets/images/sections-bg-images/take-action.jpg') no-repeat center/cover;
+  background-attachment: fixed;
+}
+
+#questions #area {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#questions h1 {
+  font-size: 32px;
+  color: #fff;
+}
+
+#questions p {
+  margin: auto;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+#questions i {
+  color: #fff;
+}
+
+#questions button {
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: 40px;
+  background: rgba(0, 0, 0, 0);
+}
+
+#questions button:hover {
+  border: 2px solid #914b22;
+  background: #914b22;
+  color: #fff;
+}
+
+/* ------- fooer ------- */
+#footer {
+  background: #252525;
+}
+
+#footer .container {
+  padding: 80px 0 0;
+}
+
+#footer h3 {
+  font-style: normal;
+}
+
+#footer > *:not(h3) {
+  color: #fff;
+  font-weight: 500;
+}
+
+#footer ul {
+  padding: 0;
+}
+
+#footer li {
+  list-style: none;
+  margin: 10px;
+}
+
+#footer #socialMedia i {
+  margin: 2px;
+}
+
+#footer #socialMedia {
+  margin: 1rem 0;
+}
+
+#footer .row:first-child {
+  margin-bottom: 50px;
+}
+
+#footer .row:first-child .col:last-child i {
+  color: #914b22;
+}
+
+#footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer p:last-child {
+  text-align: right;
+}
+
+#footer p:last-child i {
+  color: #914b22;
+}
+
+#footer p:last-child a:hover {
+  color: #914b22;
+}
 /* ------- RWD ------- */
 @media (min-width: 768px) {
   #service #right {
@@ -268,6 +485,28 @@ h3 {
     width: 350px;
     height: 350px;
     margin: 20px;
+  }
+
+  #members h1 {
+    font-size: 50px;
+  }
+
+  #questions h1 {
+    font-size: 50px;
+    color: #fff;
+  }
+
+  #footer .row:last-child {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #footer .row:first-child .col:nth-child(2),
+  #footer .row:first-child .col:nth-child(3) {
+    width: 48%;
+    display: inline-block;
   }
 }
 
@@ -296,9 +535,28 @@ h3 {
     width: 50%;
   }
 
-  /* -------Service ------- */
+  #aboutUs .row {
+    flex-direction: row;
+  }
+
+  /* ------- Service ------- */
 
   #service #right .col:first-child {
     margin-top: 50px;
+  }
+  /* ------- Talanted Team Members ------- */
+
+  #questions .container {
+    width: 60%;
+  }
+
+  #footer .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #footer .col {
+    max-width: 28%;
   }
 }
