@@ -37,8 +37,10 @@ button {
   font-weight: 500;
 }
 
-#symbol {
-  color: #914b22;
+#symbol:not(#questions #symbol) {
+  color: #914f22;
+  text-align: center;
+  font-size: 40px;
 }
 
 #socialMedia i {
@@ -50,6 +52,13 @@ button {
 #socialMedia i:hover {
   background: #fff;
   color: #914b22;
+}
+
+.readMore {
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  color: #9c4f22;
 }
 
 /* 選取 */
@@ -290,13 +299,6 @@ button {
   display: block;
 }
 
-#service .card a {
-  display: block;
-  font-weight: 600;
-  text-decoration: none;
-  color: #9c4f22;
-}
-
 /* ------- Talanted Team Members ------- */
 #members {
   text-align: center;
@@ -305,12 +307,6 @@ button {
 #members h1 {
   font-size: 32px;
   margin: 0;
-}
-
-#members #symbol {
-  color: #914f22;
-  text-align: center;
-  font-size: 40px;
 }
 
 #members .col {
@@ -372,6 +368,95 @@ button {
 #members button:hover {
   color: #914b22;
   background: #fff;
+}
+
+/* ------- News ------- */
+#news {
+  background: #e6e6e6;
+}
+
+#news a:hover,
+#news h4:hover {
+  color: #914b22;
+}
+
+#news h1 {
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+}
+
+#news .card {
+  margin: 15px;
+}
+#news .card #text {
+  padding-right: 50px;
+}
+
+#news .card #info,
+#news .card h4 {
+  margin: 1rem 0;
+}
+
+#news .card #text a:not(.readMore) {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+#news #info a {
+  color: #5c5c5c;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#news #info i {
+  color: #914b22;
+}
+
+#news .img {
+  width: 350px;
+  height: 240px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+}
+
+#news .img .date {
+  width: 95px;
+  height: 95px;
+  background: #914b22;
+  color: #fff;
+  right: 25px;
+  top: 25px;
+  text-align: center;
+  position: absolute;
+}
+
+#news .date span:first-child {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+#news .date span:last-child {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 0.5;
+}
+
+#news .img:nth-child(1) {
+  background: url('https://flexcode.xyz/archito/assets/images/blog/post-images/1.jpg') no-repeat center/cover;
+}
+#news .col:nth-child(2) .img {
+  background: url('https://flexcode.xyz/archito/assets/images/blog/post-images/2.jpg') no-repeat center/cover;
+}
+
+#news .col:nth-child(3) .img {
+  background: url('https://flexcode.xyz/archito/assets/images/blog/post-images/3.jpg') no-repeat center/cover;
+}
+
+#news .img:hover {
+  /* transform: scale(1.2); */
 }
 
 /* ------- QA ------- */
@@ -546,6 +631,11 @@ button {
   }
   /* ------- Talanted Team Members ------- */
 
+  #news h1 {
+    font-size: 50px;
+  }
+
+  /*  */
   #questions .container {
     width: 60%;
   }
