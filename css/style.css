@@ -102,6 +102,59 @@ button {
   box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
 }
 
+#top .list {
+  width: 250px;
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.7s;
+  position: absolute;
+  padding: 15px 0;
+  top: 80px;
+  margin: 0;
+}
+
+#top .list li {
+  list-style: none;
+  line-height: 3;
+  font-weight: 600;
+  padding-left: 30px;
+}
+
+#top .list a {
+  color: #252525;
+  text-decoration: none;
+  display: block;
+}
+#top .list a:hover,
+#top .list li:hover {
+  color: #fff;
+  background: #252525;
+}
+
+#top #homeList {
+  left: 335px;
+}
+
+#top #serviceList {
+  left: 530px;
+}
+
+#top #portfoiloList {
+  left: 650px;
+}
+
+#top #blogList {
+  left: 750px;
+}
+
+#top #BlogHomeList {
+  left: 500px;
+}
+
+#top #pagesList {
+  left: 850px;
+}
+
 #top .row {
   width: 95%;
   height: 80px;
@@ -297,6 +350,28 @@ button {
   color: #9c4f22;
   font-size: 40px;
   display: block;
+}
+
+/* ------- Customers ------- */
+#customers {
+  text-align: center;
+}
+
+#customers h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+#customers button {
+  border: 2px solid #914b22;
+  color: #914b22;
+  margin-top: 40px;
+  background: rgba(0, 0, 0, 0);
+}
+
+#customers button:hover {
+  background: #914b22;
+  color: #fff;
 }
 
 /* ------- Talanted Team Members ------- */
@@ -628,6 +703,11 @@ button {
 
   #service #right .col:first-child {
     margin-top: 50px;
+  }
+
+  /* Customers */
+  #customers h1 {
+    font-size: 50px;
   }
   /* ------- Talanted Team Members ------- */
 
