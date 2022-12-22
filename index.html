@@ -14,6 +14,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -80,7 +81,29 @@
   <!-- 輪播 1 -->
 
   <!-- 輪播 2 -->
+  <section id="carousel2">
+    <div class="container">
+      <div id="swiper2" class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/portfolio/1.jpg"></div>
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/portfolio/2.jpg"></div>
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/portfolio/3.jpg"></div>
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/portfolio/4.jpg"></div>
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/portfolio/5.jpg"></div>
+        </div>
+        <!-- 分頁 -->
+        <div class="swiper-pagination"></div>
 
+        <!-- 上一張、下一張 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+      <!-- <div class="img">
+        <img src="https://flexcode.xyz/archito/assets/images/portfolio/1.jpg">
+      </div> -->
+    </div>
+  </section>
   <!-- About Us -->
   <section id="aboutUs">
     <div class="container">
@@ -185,7 +208,39 @@
         <i class="fa-solid fa-minus fa-2xs"></i> <i class="fa-sharp fa-solid fa-square fa-2xs"></i> <i
           class="fa-solid fa-minus fa-2xs"></i>
       </div>
+
       <button>See All Testmonials</button>
+    </div>
+  </section>
+
+  <!-- 輪播 3 -->
+  <section id="carousel3">
+    <div class="container">
+      <div class="swiper">
+        <div id="swiper3" class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/clients-logos/1-white.png">
+          </div>
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/clients-logos/2-white.png">
+          </div>
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/clients-logos/3-white.png">
+          </div>
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/clients-logos/4-white.png">
+          </div>
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/clients-logos/5-white.png">
+          </div>
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/clients-logos/6-white.png">
+          </div>
+          <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/clients-logos/7-white.png">
+          </div>
+        </div>
+        <!-- 分頁 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 上一張、下一張 -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
     </div>
   </section>
 
@@ -374,9 +429,8 @@
     </div>
   </section>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'
-    integrity='sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=='
-    crossorigin='anonymous'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
     $('#top .row li').each(function (i) {
       $(this).on('mouseover', function () {
@@ -392,6 +446,60 @@
         })
       }
     })
+
+    const swiper2 = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 15,
+      speed: 500,
+      auto: {
+        delay: 3000,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      //   hide: true
+      // },
+    });
+
+    const swiper3 = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 6,
+      spaceBetween: 5,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true
+      },
+    });
   </script>
 </body>
 
