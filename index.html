@@ -79,6 +79,63 @@
   </section>
 
   <!-- 輪播 1 -->
+  <section id="carousel1">
+    <div class="container">
+      <div id="swiper1" class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div id="slideOne">
+              <h1>Innovating Stunning<br>Interior Designs</h1>
+              <p>lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+                Sed architecto dolorum inventore totam adipisci provident placeat persp</p>
+              <button>Start Now <i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+            <ul id="icons">
+              <li> <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a></li>
+              <li> <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a></li>
+              <li> <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a></li>
+              <li> <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a></li>
+            </ul>
+          </div>
+          <div class="swiper-slide">
+            <div id="slideTwo">
+              <h1>Graet & Solid<br>Architecture Solutio</h1>
+              <p>lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+                Sed architecto dolorum inventore totam adipisci provident placeat persp</p>
+              <a href="#">Watch Our Video</a>
+            </div>
+            <ul id="icons">
+              <li> <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a></li>
+              <li> <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a></li>
+              <li> <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a></li>
+              <li> <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a></li>
+            </ul>
+          </div>
+          <div class="swiper-slide">
+            <div id="slideThree">
+              <h1>Providing Standout<br>Furniture Choices</h1>
+              <p>lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+                Sed architecto dolorum inventore totam adipisci provident placeat persp</p>
+              <button>Download Catalog <i class="fa-solid fa-download"></i></i></button>
+            </div>
+            <ul id="icons">
+              <li> <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a></li>
+              <li> <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a></li>
+              <li> <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a></li>
+              <li> <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- 分頁 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 上一張、下一張 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+    </div>
+  </section>
 
   <!-- 輪播 2 -->
   <section id="carousel2">
@@ -447,6 +504,34 @@
       }
     })
 
+    const swiper1 = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 15,
+      speed: 500,
+      auto: {
+        delay: 3000,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      //   hide: true
+      // },
+    });
     const swiper2 = new Swiper('.swiper', {
       // Optional parameters
       direction: 'horizontal',
@@ -476,29 +561,29 @@
       // },
     });
 
-    const swiper3 = new Swiper('.swiper', {
-      // Optional parameters
-      direction: 'horizontal',
+    // const swiper3 = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
       loop: true,
-      slidesPerView: 6,
-      spaceBetween: 5,
+        slidesPerView: 6,
+          spaceBetween: 5,
 
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
+            // If we need pagination
+            pagination: {
+      el: '.swiper-pagination',
       },
 
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
 
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
         hide: true
-      },
+    },
     });
   </script>
 </body>
