@@ -7,7 +7,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #5c5c5c;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -85,27 +85,74 @@ button {
   bottom: 30px;
   right: 30px;
   font-size: 25px;
-  z-index: 1;
+  z-index: 3;
 }
 
 #arrowUp:hover {
   background: #914b2299;
 }
 
+#carousel1 .swiper-button-prev,
+#carousel1 .swiper-button-next,
+#carousel2 .swiper-button-prev,
+#carousel2 .swiper-button-next {
+  width: 55px;
+  height: 40px;
+  background: #914b22;
+  color: #fff;
+  font-weight: 900;
+}
+
+#carousel1 .swiper-button-prev::after,
+#carousel1 .swiper-button-next::after,
+#carousel2 .swiper-button-prev::after,
+#carousel2 .swiper-button-next::after {
+  font-size: 18px;
+  padding: 5px;
+}
+
 /* ------- 頂端 ------- */
 #top {
   width: 100%;
   position: fixed;
-  background: #fff;
+  background: rgba(0, 0, 0, 0);
   z-index: 3;
   top: 0;
-  box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+#top .row {
+  width: 95%;
+  height: 80px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top .fa-bars::before {
+  display: block;
+}
+
+#top .col img {
+  padding: 15px;
+  width: 100px;
+}
+
+#top .col li {
+  display: none;
+}
+
+#top .col a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 
 #top .list {
   width: 250px;
   background: #fff;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   transition: 0.7s;
   position: absolute;
   padding: 15px 0;
@@ -156,54 +203,25 @@ button {
   left: 850px;
 }
 
-#top .row {
-  width: 95%;
-  height: 80px;
-  display: flex;
-  margin: auto;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#top .fa-bars::before {
-  display: block;
-}
-
-#top .col img {
-  padding: 15px;
-  width: 100px;
-}
-
-#top .col li {
-  display: none;
-}
-
-#top .col a {
-  text-decoration: none;
-  color: #252525;
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-
 /* ------- 輪播 1 ------- */
 #carousel1 {
   text-align: center;
   color: #fff;
   position: relative;
-  z-index: -1;
-  background: url('https://flexcode.xyz/archito/assets/images/hero/hero-slider-bg-img-1.jpg') no-repeat center/cover;
+  background-image: url('https://flexcode.xyz/archito/assets/images/hero/hero-slider-bg-img-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-#carousel1::before {
+#carousel1::after {
   content: '';
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -2;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 #carousel1 h1 {
@@ -226,7 +244,6 @@ button {
   text-align: left;
   margin: 0;
   padding: 0;
-  left: 0;
 }
 
 #carousel1 #icons li {
@@ -240,19 +257,26 @@ button {
   font-size: 18px;
 }
 
-#carousel1 .swiper-button-prev,
-#carousel1 .swiper-button-next {
-  width: 55px;
-  height: 40px;
-  background: #914b22;
+#swiper1 .swiper-slide a {
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-#carousel1 .swiper-button-prev::after,
-#carousel1 .swiper-button-next::after {
-  font-size: 18px;
-  padding: 5px;
+#swiper1 .swiper-slide #watchVideo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#carousel1 .swiper-button-prev,
+#carousel1 .swiper-button-next {
+  background: #fff3;
+}
+
+#carousel1 .swiper-button-prev:hover,
+#carousel1 .swiper-button-next:hover {
+  background: #914b22;
 }
 
 /* ------- 輪播 2 ------- */
@@ -266,31 +290,16 @@ button {
   height: 100%;
   position: absolute;
   top: 0;
-  background: url('https://flexcode.xyz/archito/assets/images/sections-bg-images/portfolio.jpg') no-repeat center/cover;
   opacity: 0.02;
+  background: url('https://flexcode.xyz/archito/assets/images/sections-bg-images/portfolio.jpg') no-repeat center/cover;
 }
 
-#carousel2 .swiper-button-prev,
-#carousel2 .swiper-button-next {
-  width: 55px;
-  height: 40px;
-  background: #914b22;
-  color: #fff;
-  font-weight: 900;
+#carousel2 .swiper-button-prev:hover,
+#carousel2 .swiper-button-next:hover {
+  opacity: 0.8;
 }
 
-#carousel2 .swiper-button-prev::after,
-#carousel2 .swiper-button-next::after {
-  font-size: 18px;
-  padding: 5px;
-}
-
-#carousel2 .img {
-  width: 33.3333%;
-  height: 100%;
-}
-
-#carousel2 .swiper {
+#carousel2 .swiper-slide {
   height: 500px;
 }
 

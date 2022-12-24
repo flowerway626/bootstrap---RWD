@@ -8,23 +8,27 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/all.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- goole font: Poppins -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <!-- goole font: Roboto -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <!-- 輪播套件 swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
+  <!-- 返回頂端 ↑ -->
   <a href="#" id="arrowUp"><i class="fa-solid fa-arrow-up"></i></a>
   <!-- 頂端 -->
   <section id="top">
     <div class="row">
       <div class="col">
         <a href="#">
-          <img src="https://flexcode.xyz/archito/assets/images/logo/logo-dark-wide.png" alt=""></a>
+          <img src="https://flexcode.xyz/archito/assets/images/logo/logo-light-wide.png" alt=""></a>
       </div>
       <div class="col">
         <ul>
@@ -84,56 +88,40 @@
       <div id="swiper1" class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div id="slideOne">
-              <h1>Innovating Stunning<br>Interior Designs</h1>
-              <p>lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                Sed architecto dolorum inventore totam adipisci provident placeat persp</p>
-              <button>Start Now <i class="fa-solid fa-arrow-right-long"></i></button>
-            </div>
-            <ul id="icons">
-              <li> <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a></li>
-              <li> <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a></li>
-              <li> <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a></li>
-              <li> <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a></li>
-            </ul>
+            <h1>Innovating Stunning<br>Interior Designs</h1>
+            <p>lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+              Sed architecto dolorum inventore totam adipisci provident placeat persp</p>
+            <button>Start Now <i class="fa-solid fa-arrow-right-long"></i></button>
           </div>
           <div class="swiper-slide">
-            <div id="slideTwo">
-              <h1>Graet & Solid<br>Architecture Solutio</h1>
-              <p>lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                Sed architecto dolorum inventore totam adipisci provident placeat persp</p>
-              <a href="#">Watch Our Video</a>
-            </div>
-            <ul id="icons">
-              <li> <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a></li>
-              <li> <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a></li>
-              <li> <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a></li>
-              <li> <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a></li>
-            </ul>
+            <h1>Graet & Solid<br>Architecture Solutio</h1>
+            <p>lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+              Sed architecto dolorum inventore totam adipisci provident placeat persp</p>
+            <a href="#" id="watchVideo">
+              <img src="https://flexcode.xyz/archito/assets/images/icons/play-icon.svg" style="width:30px"> &ensp;
+              <span>Watch Our Video</span>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div id="slideThree">
-              <h1>Providing Standout<br>Furniture Choices</h1>
-              <p>lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                Sed architecto dolorum inventore totam adipisci provident placeat persp</p>
-              <button>Download Catalog <i class="fa-solid fa-download"></i></i></button>
-            </div>
-            <ul id="icons">
-              <li> <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a></li>
-              <li> <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a></li>
-              <li> <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a></li>
-              <li> <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a></li>
-            </ul>
+            <h1>Providing Standout<br>Furniture Choices</h1>
+            <p>lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+              Sed architecto dolorum inventore totam adipisci provident placeat persp</p>
+            <button>Download Catalog <i class="fa-solid fa-download"></i></i></button>
           </div>
         </div>
         <!-- 分頁 -->
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
 
         <!-- 上一張、下一張 -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        <!-- <div class="swiper-scrollbar"></div> -->
       </div>
+      <ul id="icons">
+        <li> <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a></li>
+        <li> <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a></li>
+        <li> <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a></li>
+        <li> <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a></li>
+      </ul>
     </div>
   </section>
 
@@ -148,19 +136,16 @@
           <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/portfolio/4.jpg"></div>
           <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/portfolio/5.jpg"></div>
         </div>
-        <!-- 分頁 -->
-        <div class="swiper-pagination"></div>
-
         <!-- 上一張、下一張 -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        <!-- <div class="swiper-scrollbar"></div> -->
       </div>
       <!-- <div class="img">
         <img src="https://flexcode.xyz/archito/assets/images/portfolio/1.jpg">
       </div> -->
     </div>
   </section>
+
   <!-- About Us -->
   <section id="aboutUs">
     <div class="container">
@@ -265,7 +250,9 @@
         <i class="fa-solid fa-minus fa-2xs"></i> <i class="fa-sharp fa-solid fa-square fa-2xs"></i> <i
           class="fa-solid fa-minus fa-2xs"></i>
       </div>
+      <div>
 
+      </div>
       <button>See All Testmonials</button>
     </div>
   </section>
@@ -273,8 +260,8 @@
   <!-- 輪播 3 -->
   <section id="carousel3">
     <div class="container">
-      <div class="swiper">
-        <div id="swiper3" class="swiper-wrapper">
+      <div id="swiper3" class="swiper">
+        <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/clients-logos/1-white.png">
           </div>
           <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/clients-logos/2-white.png">
@@ -290,13 +277,6 @@
           <div class="swiper-slide"><img src="https://flexcode.xyz/archito/assets/images/clients-logos/7-white.png">
           </div>
         </div>
-        <!-- 分頁 -->
-        <div class="swiper-pagination"></div>
-
-        <!-- 上一張、下一張 -->
-        <!-- <div class="swiper-button-prev"></div> -->
-        <!-- <div class="swiper-button-next"></div> -->
-        <!-- <div class="swiper-scrollbar"></div> -->
       </div>
     </div>
   </section>
@@ -489,101 +469,117 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
-    $('#top .row li').each(function (i) {
-      $(this).on('mouseover', function () {
-        if (i === 1 || i === 6 || i === 7) return
-        else if (i === 0) $('#top .list').eq(i).removeClass('animate__fadeOutDown').addClass('animate__fadeInUp').show()
-        else $('#top .list').eq(i - 1).removeClass('animate__fadeOutDown').addClass('animate__fadeInUp').show()
-      })
-      if ($('#top .list').css('display') !== 'block') {
-        $(this).on('mouseout', function () {
-          if (i === 1 || i === 6 || i === 7) return
-          else if (i === 0) $('#top .list').eq(i).addClass('animate__fadeOutDown')
-          else $('#top .list').eq(i - 1).addClass('animate__fadeOutDown')
-        })
+    // 頁面滾動頂端欄變色
+    $(window).on('scroll', function () {
+      if (window.scrollY >= 100) {
+        $('#top').css(
+          {
+            'box-shadow': '0px 10px 8px rgba(0, 0, 0, 0.1)',
+            'background': '#fff',
+          }
+        )
+        $('#top .col a').css('color', '#252525')
+        $('#top .col img').attr('src', 'https://flexcode.xyz/archito/assets/images/logo/logo-dark-wide.png')
+      } else {
+        $('#top').css(
+          {
+            'box-shadow': 'none',
+            'background': 'rgba(0, 0, 0, 0)',
+          }
+        )
+        $('#top .col a').css('color', '#fff')
+        $('#top .col img').attr('src', 'https://flexcode.xyz/archito/assets/images/logo/logo-light-wide.png')
       }
     })
+    // 鼠標滑過頂端列時顯示選單
+    $('#top .row li').each(function (i) {
+      $(this).on('mouseover', function () {
+        // 先把顯示的選單都隱藏
+        $('#top .list').addClass('animate__fadeOutDown')
+        if (i === 1 || i === 6 || i === 7) return
+        if (i === 0) $('#top .list').eq(i).removeClass('animate__fadeOutDown').addClass('animate__fadeInUp').show()
+        else $('#top .list').eq(i - 1).removeClass('animate__fadeOutDown').addClass('animate__fadeInUp').show()
+      })
+    })
+    // 鼠標離開任一選單時
+    $('#top .list').each(function () {
+      $(this).on('mouseleave', function () {
+        $(this).addClass('animate__fadeOutDown')
+        $('#top #blogList').addClass('animate__fadeOutDown')
+      })
+      $('#top #blogList li').eq(0).on('mouseover', function () {
+        $('#top #BlogHomeList').removeClass('animate__fadeOutDown').addClass('animate__fadeInUp').show()
+      })
+    })
 
-    const swiper1 = new Swiper('.swiper', {
-      // Optional parameters
+    const swiper1 = new Swiper('#swiper1', {
       direction: 'horizontal',
       loop: true,
       slidesPerView: 1,
-      spaceBetween: 15,
-      speed: 500,
-      auto: {
-        delay: 3000,
+      spaceBetween: 90,
+      // 淡入淡出
+      effect: "fade",
+      // 避免看到下面的內容
+      fadeEffect: {
+        crossFade: true
       },
-
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-      // scrollbar: {
-      //   el: '.swiper-scrollbar',
-      //   hide: true
+      speed: 1000,
+      // autoplay: {
+      //   delay: 5000,
       // },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
-    const swiper2 = new Swiper('.swiper', {
+    // 換輪播 1 背景
+    swiper1.on('slideChange', function () {
+      if (swiper1.realIndex === 0) {
+        $('#carousel1').css('background-image', `url('https://flexcode.xyz/archito/assets/images/hero/hero-slider-bg-img-1.jpg')`)
+      } else if (swiper1.realIndex === 1) {
+        $('#carousel1').css('background-image', `url('https://flexcode.xyz/archito/assets/images/hero/hero-slider-bg-img-2.jpg')`)
+      } else {
+        $('#carousel1').css('background-image', `url('https://flexcode.xyz/archito/assets/images/hero/hero-slider-bg-img-3.jpg')`)
+      }
+      // console.log(swiper1.previousIndex)
+    })
+
+    const swiper2 = new Swiper('#swiper2', {
       // Optional parameters
       direction: 'horizontal',
       loop: true,
       slidesPerView: 3,
       spaceBetween: 15,
-      speed: 500,
-      auto: {
-        delay: 3000,
+      speed: 1000,
+      autoplay: {
+        delay: 5000,
       },
-
-      // If we need pagination
       pagination: {
         el: '.swiper-pagination',
       },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
 
-      // Navigation arrows
+    const swiper3 = new Swiper('#swiper3', {
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 6,
+      spaceBetween: 5,
+      grabCursor: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-
-      // And if we need scrollbar
-      // scrollbar: {
-      //   el: '.swiper-scrollbar',
-      //   hide: true
-      // },
-    });
-
-    // const swiper3 = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-      loop: true,
-        slidesPerView: 6,
-          spaceBetween: 5,
-
-            // If we need pagination
-            pagination: {
-      el: '.swiper-pagination',
-      },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
+      scrollbar: {
+        el: '.swiper-scrollbar',
         hide: true
-    },
+      },
     });
   </script>
 </body>
