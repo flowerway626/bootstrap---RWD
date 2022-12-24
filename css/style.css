@@ -95,7 +95,9 @@ button {
 #carousel1 .swiper-button-prev,
 #carousel1 .swiper-button-next,
 #carousel2 .swiper-button-prev,
-#carousel2 .swiper-button-next {
+#carousel2 .swiper-button-next,
+#customers .swiper-button-prev,
+#customers .swiper-button-next {
   width: 55px;
   height: 40px;
   background: #914b22;
@@ -106,7 +108,9 @@ button {
 #carousel1 .swiper-button-prev::after,
 #carousel1 .swiper-button-next::after,
 #carousel2 .swiper-button-prev::after,
-#carousel2 .swiper-button-next::after {
+#carousel2 .swiper-button-next::after,
+#customers .swiper-button-prev::after,
+#customers .swiper-button-next::after {
   font-size: 18px;
   padding: 5px;
 }
@@ -225,7 +229,7 @@ button {
 }
 
 #carousel1 h1 {
-  font-size: 30px;
+  font-size: 32px;
   color: #fff;
 }
 
@@ -326,7 +330,7 @@ button {
 }
 
 #aboutUs #left h1 {
-  font-size: 2.5rem;
+  font-size: 32px;
   line-height: 1.5;
   margin: 0;
 }
@@ -367,19 +371,21 @@ button {
 }
 
 #aboutUs #aboutNum span {
-  font-size: 2.5rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 #aboutUs #right #area {
-  width: 600px;
-  height: 750px;
+  width: 450px;
+  height: 300px;
   position: relative;
+  margin: 0 auto 50px;
 }
 
 #aboutUs #right #big {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 #aboutUs #right #line {
@@ -391,7 +397,7 @@ button {
 }
 
 #aboutUs #right #little {
-  width: 45%;
+  width: 28%;
   transform: rotate(15deg);
   position: absolute;
   bottom: 40px;
@@ -422,7 +428,6 @@ button {
 }
 
 /* -------Service ------- */
-
 #service {
   background: #e6e6e6;
 }
@@ -435,7 +440,7 @@ button {
 }
 #service #left h1 {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 #service #left button {
@@ -479,11 +484,70 @@ button {
 /* ------- Customers ------- */
 #customers {
   text-align: center;
+  margin: auto;
+}
+
+#customers .container {
+  width: 85%;
 }
 
 #customers h1 {
   font-size: 32px;
   margin: 0;
+}
+
+#customers #manager {
+  margin: auto;
+  padding: 60px 20px;
+  background: #f1f1f1;
+  text-align: left;
+  position: relative;
+  border: 1px solid rgba(156, 79, 34, 0.5);
+  border-bottom: 3px solid #914b22;
+}
+
+#customers #manager #img {
+  width: 60px;
+  border: 2px solid #914b22;
+  border-radius: 50%;
+}
+#customers #manager #name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#customers #manager #name h5 {
+  font-weight: 800;
+  font-size: 18px;
+  margin: 10px;
+}
+#customers #manager #name h6 {
+  color: #914b22;
+  margin: 10px;
+}
+
+#customers #manager #stars {
+  color: #914b22;
+  margin-bottom: 25px;
+}
+
+#customers #manager #content {
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #252525;
+}
+
+#customers #quote {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+#customers #manager #quote i {
+  color: #914b2255;
+  font-size: 130px;
 }
 
 #customers button {
@@ -496,6 +560,24 @@ button {
 #customers button:hover {
   background: #914b22;
   color: #fff;
+}
+
+#customers .swiper-button-prev {
+  top: 40px;
+  left: auto;
+  right: 28px;
+  transform: translate(-50%, -50%);
+}
+#customers .swiper-button-next {
+  top: 40px;
+  left: auto;
+  right: -27px;
+  transform: translate(-50%, -50%);
+}
+
+#customers .swiper-button-prev:hover,
+#customers .swiper-button-next:hover {
+  background: #914b2299;
 }
 
 /* ------- carousel 3 ------- */
@@ -512,6 +594,10 @@ button {
   text-align: center;
 }
 
+#members .container {
+  width: 80%;
+}
+
 #members h1 {
   font-size: 32px;
   margin: 0;
@@ -519,21 +605,13 @@ button {
 
 #members .col {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-  margin: 15px;
+  margin: auto;
+  width: 360px;
 }
 
 #members .card {
   position: relative;
   text-align: left;
-}
-
-#members #area {
-  width: 100%;
-  height: 405px;
-  position: absolute;
-  top: 0;
-  background: rgba(0, 0, 0, 0.4);
-  /* display: none; */
 }
 
 #members img {
@@ -543,22 +621,13 @@ button {
 
 #members h3 {
   font-style: normal;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   margin-top: 5px;
 }
 #members p {
   margin-top: 0;
   font-weight: 500;
-}
-
-#members #socialMedia {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 90px;
-  /* display: none; */
 }
 
 #members #socialMedia i {
@@ -594,16 +663,16 @@ button {
   margin: 0;
 }
 
-#news .card {
-  margin: 15px;
-}
 #news .card #text {
+  width: 455px;
+  margin: 0 auto 3rem;
   padding-right: 50px;
 }
 
 #news .card #info,
 #news .card h4 {
-  margin: 1rem 0;
+  margin: 1rem auto;
+  width: 455px;
 }
 
 #news .card #text a:not(.readMore) {
@@ -623,8 +692,9 @@ button {
 }
 
 #news .img {
-  width: 350px;
-  height: 240px;
+  width: 455px;
+  height: 300px;
+  margin: auto;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   position: relative;
@@ -661,10 +731,6 @@ button {
 
 #news .col:nth-child(3) .img {
   background: url('https://flexcode.xyz/archito/assets/images/blog/post-images/3.jpg') no-repeat center/cover;
-}
-
-#news .img:hover {
-  /* transform: scale(1.2); */
 }
 
 /* ------- QA ------- */
@@ -770,6 +836,14 @@ button {
 }
 /* ------- RWD ------- */
 @media (min-width: 768px) {
+  #aboutUs #right #area {
+    width: 680px;
+  }
+
+  #aboutUs #right #area #little {
+    width: 33%;
+  }
+
   #service #right {
     display: flex;
   }
@@ -778,6 +852,21 @@ button {
     width: 350px;
     height: 350px;
     margin: 20px;
+  }
+
+  #aboutUs #aboutNum span {
+    font-size: 2.5rem;
+  }
+
+  #news .img {
+    width: 690px;
+    height: 400px;
+  }
+
+  #news .card #info,
+  #news .card h4,
+  #news .card #text {
+    width: 690px;
   }
 
   #members h1 {
@@ -836,6 +925,19 @@ button {
     flex-direction: row;
   }
 
+  #aboutUs #right #area #little {
+    width: 45%;
+  }
+
+  #members .col {
+    margin: 15px;
+  }
+
+  #aboutUs #right #area {
+    width: 500px;
+    height: 650px;
+  }
+
   /* ------- Service ------- */
 
   #service #right .col:first-child {
@@ -846,10 +948,29 @@ button {
   #customers h1 {
     font-size: 50px;
   }
+
+  #customers #manager #content {
+    font-size: 18px;
+  }
   /* ------- Talanted Team Members ------- */
 
   #news h1 {
     font-size: 50px;
+  }
+
+  #news .row {
+    justify-content: space-around;
+  }
+
+  #news .img {
+    width: 350px;
+    height: 240px;
+  }
+
+  #news .card #info,
+  #news .card #text,
+  #news .card h4 {
+    width: 350px;
   }
 
   /*  */

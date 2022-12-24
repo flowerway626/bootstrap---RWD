@@ -250,8 +250,78 @@
         <i class="fa-solid fa-minus fa-2xs"></i> <i class="fa-sharp fa-solid fa-square fa-2xs"></i> <i
           class="fa-solid fa-minus fa-2xs"></i>
       </div>
-      <div>
-
+      <div id="swiper4" class="swiper">
+        <div class="swiper-wrapper">
+          <div id="manager" class="swiper-slide">
+            <div id="name">
+              <img id="img" src="https://flexcode.xyz/archito/assets/images/testimonials/1.jpg">
+              <div>
+                <h5>Aly Ahmed</h5>
+                <h6>Manager</h6>
+              </div>
+            </div>
+            <div id="stars">
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-regular fa-2xs fa-star"></i>
+            </div>
+            <p id="content">
+              ipsum dolor sit amet<br>consectetur adipisicing elit.<br>
+              Quod, id sequi aut qui est ab,<br> corporis quis maiores<br>
+              reiciendis explicabo odio<br> tenetur nulla sint vel.
+            </p>
+            <span id="quote"><i class="fa-solid fa-quote-left"></i></span>
+          </div>
+          <div id="manager" class="swiper-slide">
+            <div id="name">
+              <img id="img" src="https://flexcode.xyz/archito/assets/images/testimonials/2.jpg">
+              <div>
+                <h5>Allan Ahmed</h5>
+                <h6>Manager</h6>
+              </div>
+            </div>
+            <div id="stars">
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-regular fa-2xs fa-star"></i>
+            </div>
+            <p id="content">
+              ipsum dolor sit amet<br>consectetur adipisicing elit.<br>
+              Quod, id sequi aut qui est ab,<br> corporis quis maiores<br>
+              reiciendis explicabo odio<br> tenetur nulla sint vel.
+            </p>
+            <span id="quote"><i class="fa-solid fa-quote-left"></i></span>
+          </div>
+          <div id="manager" class="swiper-slide">
+            <div id="name">
+              <img id="img" src="https://flexcode.xyz/archito/assets/images/testimonials/3.jpg">
+              <div>
+                <h5>Maya Ahmed</h5>
+                <h6>Manager</h6>
+              </div>
+            </div>
+            <div id="stars">
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-solid fa-2xs fa-star"></i>
+              <i class="fa-regular fa-2xs fa-star"></i>
+            </div>
+            <p id="content">
+              ipsum dolor sit amet<br>consectetur adipisicing elit.<br>
+              Quod, id sequi aut qui est ab,<br> corporis quis maiores<br>
+              reiciendis explicabo odio<br> tenetur nulla sint vel.
+            </p>
+            <span id="quote"><i class="fa-solid fa-quote-left"></i></span>
+          </div>
+        </div>
+        <!-- 上一張、下一張 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
       <button>See All Testmonials</button>
     </div>
@@ -307,13 +377,6 @@
         <div class="col">
           <div class="card">
             <img src="https://flexcode.xyz/archito/assets/images/our-team/3.jpg" alt="">
-            <div id="area"></div>
-            <div id="socialMedia">
-              <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a>
-              <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a>
-            </div>
             <h3>Allan Smith</h3>
             <p>Manager</p>
           </div>
@@ -524,9 +587,10 @@
         crossFade: true
       },
       speed: 1000,
-      // autoplay: {
-      //   delay: 5000,
-      // },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -548,11 +612,23 @@
       // Optional parameters
       direction: 'horizontal',
       loop: true,
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 15,
       speed: 1000,
       autoplay: {
         delay: 5000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
       },
       pagination: {
         el: '.swiper-pagination',
@@ -565,21 +641,58 @@
 
     const swiper3 = new Swiper('#swiper3', {
       direction: 'horizontal',
+      centeredSlides: true,
       loop: true,
-      slidesPerView: 6,
+      slidesPerView: 2,
       spaceBetween: 5,
       grabCursor: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 6,
+        },
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    const swiper4 = new Swiper('#swiper4', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      // slidesPerView: 1,
+      spaceBetween: 15,
+      grabCursor: true,
+      speed: 1000,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+      },
       pagination: {
         el: '.swiper-pagination',
       },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: true
-      },
+      }
     });
   </script>
 </body>
