@@ -116,6 +116,34 @@ button {
   padding: 5px;
 }
 
+.list {
+  background: #fff;
+  transition: 0.7s;
+  position: absolute;
+  padding: 15px 0;
+  top: 80px;
+  margin: 0;
+}
+
+.list li {
+  list-style: none;
+  line-height: 3;
+  font-weight: 600;
+  padding-left: 30px;
+}
+
+.list a {
+  color: #252525;
+  text-decoration: none;
+  display: block;
+}
+
+.list a:hover,
+.list li:hover {
+  color: #fff;
+  background: #252525;
+}
+
 /* ------- 頂端 ------- */
 #top {
   width: 100%;
@@ -157,41 +185,7 @@ button {
 
 #top .list {
   width: 250px;
-  background: #fff;
-  transition: 0.7s;
-  position: absolute;
-  padding: 15px 0;
-  top: 80px;
-  margin: 0;
   display: none;
-}
-
-.list {
-  background: #fff;
-  transition: 0.7s;
-  position: absolute;
-  padding: 15px 0;
-  top: 80px;
-  margin: 0;
-}
-
-.list li {
-  list-style: none;
-  line-height: 3;
-  font-weight: 600;
-  padding-left: 30px;
-}
-
-.list a {
-  color: #252525;
-  text-decoration: none;
-  display: block;
-}
-
-.list a:hover,
-.list li:hover {
-  color: #fff;
-  background: #252525;
 }
 
 #top #homeList {
@@ -222,10 +216,35 @@ button {
 #sidebar {
   width: 70%;
   height: calc(100% - 80px);
-  overflow: scroll;
+  overflow-y: auto;
   transition: 0.5s;
-  display: block;
+  display: none;
   z-index: 3;
+  font-size: 14px;
+  position: fixed;
+  padding: 0;
+}
+
+#sidebar li {
+  padding: 12px;
+  line-height: 2.5;
+}
+
+#sidebar li a:not(#Home) {
+  color: #5c5c5c;
+}
+
+#sidebar ul:not(.list) {
+  padding-left: 10px;
+}
+
+#sidebar #homeList,
+#sidebar #serviceList,
+#sidebar #portfoiloList,
+#sidebar #blogList,
+#sidebar #BlogHomeList,
+#sidebar #pagesList {
+  display: none;
 }
 
 /* ------- 輪播 1 ------- */

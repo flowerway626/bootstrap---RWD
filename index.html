@@ -84,9 +84,9 @@
   </section>
 
   <!-- 側邊攔 -->
-  <ul id="sidebar" class="list">
+  <ul id="sidebar" class="list animate__animated">
     <li>
-      <a href="#">Home <i class="fa-solid fa-chevron-down"></i></a>
+      <a id="Home" href="#">Home <i class="fa-solid fa-chevron-down"></i></a>
     </li>
     <ul class="animate__animated" id="homeList">
       <li><a href="#">Home-1</a></li>
@@ -120,15 +120,13 @@
       </ul>
       <li><a href="#">Single Post</a></li>
     </ul>
-
-    <li><a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a>
-      <ul class="animate__animated" id="pagesList">
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Our Team</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">404</a></li>
-      </ul>
-    </li>
+    <li><a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a></li>
+    <ul class="animate__animated" id="pagesList">
+      <li><a href="#">Testimonials</a></li>
+      <li><a href="#">Our Team</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">404</a></li>
+    </ul>
     <li><a href="#">Contact Us</a></li>
   </ul>
 
@@ -580,30 +578,40 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
+    // 頂端欄白底
+    function topLight() {
+      $('#top').css(
+        {
+          'box-shadow': '0px 10px 8px rgba(0, 0, 0, 0.1)',
+          'background': '#fff',
+        }
+      )
+      $('#top .col a').css('color', '#252525')
+      $('#top .col img').attr('src', './images/logo-dark.png')
+    }
+    // 頂端欄透明
+    function topDark() {
+      $('#top').css(
+        {
+          'box-shadow': 'none',
+          'background': 'rgba(0, 0, 0, 0)',
+        }
+      )
+      $('#top .col a').css('color', '#fff')
+      $('#top .col img').attr('src', './images/logo-light.png')
+    }
+
     // 頁面滾動頂端欄變色
     $(window).on('scroll', function () {
       if (window.scrollY >= 100) {
         $('#arrowUp').show()
-        $('#top').css(
-          {
-            'box-shadow': '0px 10px 8px rgba(0, 0, 0, 0.1)',
-            'background': '#fff',
-          }
-        )
-        $('#top .col a').css('color', '#252525')
-        $('#top .col img').attr('src', './images/logo-dark.png')
+        topLight()
       } else {
         $('#arrowUp').hide()
-        $('#top').css(
-          {
-            'box-shadow': 'none',
-            'background': 'rgba(0, 0, 0, 0)',
-          }
-        )
-        $('#top .col a').css('color', '#fff')
-        $('#top .col img').attr('src', './images/logo-light.png')
+        topDark()
       }
     })
+
     // 鼠標滑過頂端列時顯示選單
     $('#top .row li').each(function (i) {
       $(this).on('mouseover', function () {
@@ -614,6 +622,7 @@
         else $('#top .list').eq(i - 1).removeClass('animate__fadeOutDown').addClass('animate__fadeInUp').show()
       })
     })
+
     // 鼠標離開任一選單時
     $('#top .list').each(function () {
       $(this).on('mouseleave', function () {
@@ -626,11 +635,42 @@
     })
 
     // 側邊攔收合
+    let sidebarCount = 0
     $('#top .col').eq(2).on('click', function (e) {
-      console.log(event.detail)
-      if (event.detail % 2 !== 0) $('#sidebar').hide().css('')
-      else $('#sidebar').show()
+      sidebarCount++
+      console.log(sidebarCount)
+      if (sidebarCount % 2 !== 0) {
+        $('#sidebar').removeClass('animate__slideOutLeft').addClass('animate__slideInLeft').show()
+        topLight()
+      } else {
+        $('#sidebar').addClass('animate__slideOutLeft')
+        topDark()
+      }
+    })
 
+    // 側邊欄內各項目收合
+    let sidebarUlCount = 0
+    $('#sidebar li').each(function (i) {
+      console.log(i + '  ' + $(this).find('i').text())
+      $(this).on('click', function () {
+        sidebarUlCount++
+        console.log(sidebarUlCount)
+        if (sidebarUlCount % 2 !== 0) {
+          if (i === 0) $('#sidebar #homeList').show()
+          else if (i === 8) $('#sidebar #serviceList').show()
+          else if (i === 11) $('#sidebar #portfoiloList').show()
+          else if (i === 17) $('#sidebar #blogList').show()
+          else if (i === 18) $('#sidebar #BlogHomeList').show()
+          else if (i === 23) $('#sidebar #pagesList').show()
+        } else {
+          if (i === 0) $('#sidebar #homeList').hide()
+          else if (i === 8) $('#sidebar #serviceList').hide()
+          else if (i === 11) $('#sidebar #portfoiloList').hide()
+          else if (i === 17) $('#sidebar #blogList').hide()
+          else if (i === 18) $('#sidebar #BlogHomeList').hide()
+          else if (i === 23) $('#sidebar #pagesList').hide()
+        }
+      })
     })
 
     const swiper1 = new Swiper('#swiper1', {
