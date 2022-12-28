@@ -23,6 +23,7 @@
 <body>
   <!-- 返回頂端 ↑ -->
   <a href="#" id="arrowUp" class="animate__animated animate__fadeInUp"><i class="fa-solid fa-arrow-up"></i></a>
+
   <!-- 頂端 -->
   <section id="top">
     <div class="row">
@@ -81,6 +82,55 @@
       <li><a href="#">Blog Home 3</a></li>
     </ul>
   </section>
+
+  <!-- 側邊攔 -->
+  <ul id="sidebar" class="list">
+    <li>
+      <a href="#">Home <i class="fa-solid fa-chevron-down"></i></a>
+    </li>
+    <ul class="animate__animated" id="homeList">
+      <li><a href="#">Home-1</a></li>
+      <li><a href="#">Home-2</a></li>
+      <li><a href="#">Home-3</a></li>
+      <li><a href="#">Home-4</a></li>
+      <li><a href="#">Home-5</a></li>
+      <li><a href="#">Home-6</a></li>
+    </ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Service <i class="fa-solid fa-chevron-down"></i></a></li>
+    <ul class="animate__animated" id="serviceList">
+      <li><a href="#">Services-1</a></li>
+      <li><a href="#">Services-2</a></li>
+    </ul>
+    <li><a href="#">Portfoilo <i class="fa-solid fa-chevron-down"></i></a> </li>
+    <ul class="animate__animated" id="portfoiloList">
+      <li><a href="#">portfoilo-Blocks</a></li>
+      <li><a href="#">portfoilo-Grid</a></li>
+      <li><a href="#">portfoilo-Grid Rounded</a></li>
+      <li><a href="#">portfoilo-Silder</a></li>
+      <li><a href="#">portfoilo-Single</a></li>
+    </ul>
+    <li><a href="#">Blog <i class="fa-solid fa-chevron-down"></i></a></li>
+    <ul class="animate__animated" id="blogList">
+      <li><a href="#">Blog Home <i class="fa-solid fa-chevron-down"></i></a></li>
+      <ul class="animate__animated" id="BlogHomeList">
+        <li><a href="#">Blog Home 1</a></li>
+        <li><a href="#">Blog Home 2</a></li>
+        <li><a href="#">Blog Home 3</a></li>
+      </ul>
+      <li><a href="#">Single Post</a></li>
+    </ul>
+
+    <li><a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a>
+      <ul class="animate__animated" id="pagesList">
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">404</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
 
   <!-- 輪播 1 -->
   <section id="carousel1">
@@ -573,6 +623,14 @@
       $('#top #blogList li').eq(0).on('mouseover', function () {
         $('#top #BlogHomeList').removeClass('animate__fadeOutDown').addClass('animate__fadeInUp').show()
       })
+    })
+
+    // 側邊攔收合
+    $('#top .col').eq(2).on('click', function (e) {
+      console.log(event.detail)
+      if (event.detail % 2 !== 0) $('#sidebar').hide().css('')
+      else $('#sidebar').show()
+
     })
 
     const swiper1 = new Swiper('#swiper1', {

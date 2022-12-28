@@ -166,20 +166,30 @@ button {
   display: none;
 }
 
-#top .list li {
+.list {
+  background: #fff;
+  transition: 0.7s;
+  position: absolute;
+  padding: 15px 0;
+  top: 80px;
+  margin: 0;
+}
+
+.list li {
   list-style: none;
   line-height: 3;
   font-weight: 600;
   padding-left: 30px;
 }
 
-#top .list a {
+.list a {
   color: #252525;
   text-decoration: none;
   display: block;
 }
-#top .list a:hover,
-#top .list li:hover {
+
+.list a:hover,
+.list li:hover {
   color: #fff;
   background: #252525;
 }
@@ -206,6 +216,16 @@ button {
 
 #top #pagesList {
   left: 850px;
+}
+
+/* ------- sidebar ------- */
+#sidebar {
+  width: 70%;
+  height: calc(100% - 80px);
+  overflow: scroll;
+  transition: 0.5s;
+  display: block;
+  z-index: 3;
 }
 
 /* ------- 輪播 1 ------- */
@@ -921,6 +941,10 @@ button {
   }
 
   #top .fa-bars::before {
+    display: none;
+  }
+
+  #sidebar {
     display: none;
   }
 
