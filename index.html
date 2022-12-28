@@ -257,13 +257,13 @@
         <div id="right" class="col">
           <div class="col">
             <div class="card animate__animated animate__fadeInUp animate__delay-1s">
-              <p><i class="fa-solid fa-pen-ruler"></i></p>
+              <span><i class="fa-solid fa-pen-ruler"></i></span>
               <h2>Creative Solutions</h2>
               <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
               <p><a href="#" class="readMore">Read More <i class="fa-solid fa-arrow-right"></i></a></p>
             </div>
             <div class="card animate__animated animate__fadeInUp animate__delay-1s">
-              <i class="fa-solid fa-compass-drafting"></i>
+              <span><i class="fa-solid fa-compass-drafting"></i></span>
               <h2>Solid Development</h2>
               <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
               <a href="#" class="readMore">Read More <i class="fa-solid fa-arrow-right"></i></a>
@@ -271,13 +271,13 @@
           </div>
           <div class="col">
             <div class="card animate__animated animate__fadeInUp animate__delay-1s">
-              <i class="fa-solid fa-layer-group"></i>
+              <span><i class="fa-solid fa-layer-group"></i></span>
               <h2>Awesome Designs</h2>
               <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
               <a href="#" class="readMore">Read More <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="card animate__animated animate__fadeInUp animate__delay-1s">
-              <i class="fa-solid fa-couch"></i>
+              <span><i class="fa-solid fa-couch"></i></span>
               <h2>High-End Appearance</h2>
               <p>Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore perferendis explicabo.</p>
               <a href="#" class="readMore">Read More <i class="fa-solid fa-arrow-right"></i></a>
@@ -408,21 +408,45 @@
       <div class="row">
         <div class="col">
           <div class="card">
-            <img src="./images/members-1.jpg">
+            <div class="img">
+              <!-- <span> <i class="fa-solid fa-arrow-right"></i></span> -->
+              <div id="socialMedia" class="animate__animated">
+                <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a>
+              </div>
+            </div>
             <h3>Ahmed Aly</h3>
             <p>Founder</p>
           </div>
         </div>
         <div class="col">
           <div class="card">
-            <img src="./images/members-2.jpg">
+            <div class="img">
+              <!-- <span> <i class="fa-solid fa-arrow-right"></i></span> -->
+              <div id="socialMedia" class="animate__animated">
+                <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a>
+              </div>
+            </div>
             <h3>Fairouz Amin</h3>
             <p>Designer</p>
           </div>
         </div>
         <div class="col">
           <div class="card">
-            <img src="./images/members-3.jpg">
+            <div class="img">
+              <!-- <span> <i class="fa-solid fa-arrow-right"></i></span> -->
+              <div id="socialMedia" class="animate__animated">
+                <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram" title="instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a>
+              </div>
+            </div>
             <h3>Allan Smith</h3>
             <p>Manager</p>
           </div>
@@ -608,7 +632,8 @@
         topLight()
       } else {
         $('#arrowUp').hide()
-        topDark()
+        if ($('#sidebar').css('display') === 'none') topDark()
+        else topLight()
       }
     })
 
@@ -651,7 +676,6 @@
     // 側邊欄內各項目收合
     let sidebarUlCount = 0
     $('#sidebar li').each(function (i) {
-      console.log(i + '  ' + $(this).find('i').text())
       $(this).on('click', function () {
         sidebarUlCount++
         console.log(sidebarUlCount)
@@ -670,6 +694,17 @@
           else if (i === 18) $('#sidebar #BlogHomeList').hide()
           else if (i === 23) $('#sidebar #pagesList').hide()
         }
+      })
+    })
+
+    $('#members .col .card').each(function (i) {
+      // $('#members .card #socialMedia')
+      $(this).on('mouseover', function () {
+        // console.log($(this))
+        $('#members .card #socialMedia').removeClass('animate__slideOutDown').addClass('animate__slideInUp').show()
+      })
+      $(this).on('mouseout', function () {
+        $('#members .card #socialMedia').addClass('animate__slideOutDown')
       })
     })
 
