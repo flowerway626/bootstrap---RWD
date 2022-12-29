@@ -29,7 +29,7 @@
     <div class="row">
       <div class="col">
         <a href="#">
-          <img src="https://flexcode.xyz/archito/assets/images/logo/logo-light-wide.png" alt=""></a>
+          <img src="./images/logo-light.png"></a>
       </div>
       <div class="col">
         <ul>
@@ -44,7 +44,7 @@
         </ul>
       </div>
       <div class="col">
-        <a href="#"><i class="fa-solid fa-2x fa-bars"></i></a>
+        <i class="fa-solid fa-2x fa-bars"></i>
       </div>
     </div>
     <ul class="list animate__animated" id="homeList">
@@ -84,7 +84,7 @@
   </section>
 
   <!-- 側邊攔 -->
-  <ul id="sidebar" class="list animate__animated">
+  <ul id="sidebar" class="list animate__animated animate__slideOutLeft">
     <li>
       <a id="Home" href="#">Home <i class="fa-solid fa-chevron-down"></i></a>
     </li>
@@ -178,12 +178,30 @@
     <div class="container">
       <div id="swiper2" class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="./images/carousel2-1.jpg"></div>
-          <div class="swiper-slide"><img src="./images/carousel2-2.jpg"></div>
-          <div class="swiper-slide"><img src="./images/carousel2-3.jpg"></div>
-          <div class="swiper-slide"><img src="./images/carousel2-4.jpg"></div>
-          <div class="swiper-slide"><img src="./images/carousel2-5.jpg"></div>
-          <div class="swiper-slide"><img src="./images/carousel2-6.jpg"></div>
+          <div class="swiper-slide">
+            <span class="animate__animated animate__fadeInDown"> <i class="fa-solid fa-arrow-right"></i></span>
+            <img src="./images/carousel2-1.jpg">
+          </div>
+          <div class="swiper-slide">
+            <span class="animate__animated animate__fadeInDown"> <i class="fa-solid fa-arrow-right"></i></span>
+            <img src="./images/carousel2-2.jpg">
+          </div>
+          <div class="swiper-slide">
+            <span class="animate__animated animate__fadeInDown"> <i class="fa-solid fa-arrow-right"></i></span>
+            <img src="./images/carousel2-3.jpg">
+          </div>
+          <div class="swiper-slide">
+            <span class="animate__animated animate__fadeInDown"> <i class="fa-solid fa-arrow-right"></i></span>
+            <img src="./images/carousel2-4.jpg">
+          </div>
+          <div class="swiper-slide">
+            <span class="animate__animated animate__fadeInDown"> <i class="fa-solid fa-arrow-right"></i></span>
+            <img src="./images/carousel2-5.jpg">
+          </div>
+          <div class="swiper-slide">
+            <span class="animate__animated animate__fadeInDown"> <i class="fa-solid fa-arrow-right"></i></span>
+            <img src="./images/carousel2-6.jpg">
+          </div>
         </div>
         <!-- 上一張、下一張 -->
         <div class="swiper-button-prev"></div>
@@ -612,7 +630,7 @@
           'background': '#fff',
         }
       )
-      $('#top .col a').css('color', '#252525')
+      $('#top .col, #top .col a').css('color', '#252525')
       $('#top .col img').attr('src', './images/logo-dark.png')
     }
     // 頂端欄透明
@@ -623,7 +641,7 @@
           'background': 'rgba(0, 0, 0, 0)',
         }
       )
-      $('#top .col a').css('color', '#fff')
+      $('#top .col, #top .col a').css('color', '#fff')
       $('#top .col img').attr('src', './images/logo-light.png')
     }
 
@@ -634,7 +652,7 @@
         topLight()
       } else {
         $('#arrowUp').hide()
-        if ($('#sidebar').css('display') === 'none') topDark()
+        if ($('#sidebar').hasClass('animate__slideOutLeft')) topDark()
         else topLight()
       }
     })
@@ -663,15 +681,14 @@
 
     // 側邊攔收合
     let sidebarCount = 0
-    $('#top .col').eq(2).on('click', function (e) {
+    $('#top .col').eq(2).on('click', function () {
       sidebarCount++
-      console.log(sidebarCount)
-      if (sidebarCount % 2 !== 0) {
-        $('#sidebar').removeClass('animate__slideOutLeft').addClass('animate__slideInLeft').show()
-        topLight()
-      } else {
+      if (sidebarCount % 2) {
         $('#sidebar').addClass('animate__slideOutLeft')
         topDark()
+      } else {
+        $('#sidebar').removeClass('animate__slideOutLeft').addClass('animate__slideInLeft').show()
+        topLight()
       }
     })
 
@@ -680,7 +697,6 @@
     $('#sidebar li').each(function (i) {
       $(this).on('click', function () {
         sidebarUlCount++
-        console.log(sidebarUlCount)
         if (sidebarUlCount % 2 !== 0) {
           if (i === 0) $('#sidebar #homeList').show()
           else if (i === 8) $('#sidebar #serviceList').show()
@@ -710,12 +726,10 @@
 
     $('#news .col .card').each(function (i) {
       $(this).on('mouseover', function () {
-        // console.log(i)
-        // console.log($(`#news .col:nth-child(${i + 1}) .img`))
         $(`#news .col:nth-child(${i + 1}) .img`).css(
           {
             'background-size': '110%',
-            'background-image': `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/news-${i + 1}.jpg')`
+            'background-image': `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/news-${i + 1}.jpg')`
           }
         )
         $('#news .img span:not(#news .date span)').eq(i).show()
@@ -797,7 +811,6 @@
 
     const swiper3 = new Swiper('#swiper3', {
       direction: 'horizontal',
-      centeredSlides: true,
       loop: true,
       slidesPerView: 2,
       spaceBetween: 5,
