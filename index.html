@@ -409,7 +409,6 @@
         <div class="col">
           <div class="card">
             <div class="img">
-              <!-- <span> <i class="fa-solid fa-arrow-right"></i></span> -->
               <div id="socialMedia" class="animate__animated">
                 <a href="#"><i class="fa-brands fa-facebook" title="facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-youtube" title="youtube"></i></a>
@@ -468,6 +467,7 @@
         <div class="col">
           <div class="card">
             <div class="img">
+              <span class="animate__animated animate__fadeInDown"> <i class="fa-solid fa-arrow-right"></i></span>
               <div class="date">
                 <span>05</span>
                 <span>oct,2020</span>
@@ -489,6 +489,7 @@
         <div class="col">
           <div class="card">
             <div class="img">
+              <span class="animate__animated animate__fadeInDown"> <i class="fa-solid fa-arrow-right"></i></span>
               <div class="date">
                 <span>15</span>
                 <span>sep,2020</span>
@@ -510,6 +511,7 @@
         <div class="col">
           <div class="card">
             <div class="img">
+              <span class="animate__animated animate__fadeInDown"> <i class="fa-solid fa-arrow-right"></i></span>
               <div class="date">
                 <span>27</span>
                 <span>aug,2020</span>
@@ -698,13 +700,34 @@
     })
 
     $('#members .col .card').each(function (i) {
-      // $('#members .card #socialMedia')
       $(this).on('mouseover', function () {
-        // console.log($(this))
-        $('#members .card #socialMedia').removeClass('animate__slideOutDown').addClass('animate__slideInUp').show()
+        $('#members .card #socialMedia').eq(i).removeClass('animate__slideOutDown').addClass('animate__slideInUp').show()
       })
-      $(this).on('mouseout', function () {
-        $('#members .card #socialMedia').addClass('animate__slideOutDown')
+      $(this).on('mouseleave', function () {
+        $('#members .card #socialMedia').eq(i).addClass('animate__slideOutDown')
+      })
+    })
+
+    $('#news .col .card').each(function (i) {
+      $(this).on('mouseover', function () {
+        // console.log(i)
+        // console.log($(`#news .col:nth-child(${i + 1}) .img`))
+        $(`#news .col:nth-child(${i + 1}) .img`).css(
+          {
+            'background-size': '110%',
+            'background-image': `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/news-${i + 1}.jpg')`
+          }
+        )
+        $('#news .img span:not(#news .date span)').eq(i).show()
+      })
+      $(this).on('mouseleave', function () {
+        $(`#news .col:nth-child(${i + 1}) .img`).css(
+          {
+            'background-size': 'cover',
+            'background-image': `url('../images/news-${i + 1}.jpg')`
+          }
+        )
+        $('#news .img span:not(#news .date span) ').eq(i).hide()
       })
     })
 

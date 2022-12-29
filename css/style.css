@@ -654,19 +654,19 @@ button {
 }
 
 #members .card {
-  position: relative;
   text-align: left;
 }
 
 #members .img {
   width: 355px;
   height: 400px;
-  /* background-image: url('../images/members-1.jpg'); */
   background-position: center;
+  background-repeat: no-repeat;
   background-size: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin: auto;
 }
 
 #members .col:nth-child(1) .img {
@@ -791,6 +791,24 @@ button {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#news .img span:not(#news .date span) {
+  width: 70px;
+  height: 60px;
+  color: #fff;
+  background: #914b22;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 
 #news .img .date {
@@ -816,15 +834,29 @@ button {
 }
 
 #news .img:nth-child(1) {
-  background: url('../images/news-1.jpg') no-repeat center/cover;
+  background-image: url('../images/news-1.jpg');
 }
 #news .col:nth-child(2) .img {
-  background: url('../images/news-2.jpg') no-repeat center/cover;
+  background-image: url('../images/news-2.jpg');
 }
 
 #news .col:nth-child(3) .img {
-  background: url('../images/news-3.jpg') no-repeat center/cover;
+  background-image: url('../images/news-3.jpg');
 }
+/* 
+#news .col:nth-child(1) .img:hover {
+  background-size: 110%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/news-1.jpg');
+}
+#news .col:nth-child(2) .img:hover {
+  background-size: 110%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/news-2.jpg');
+}
+
+#news .col:nth-child(3) .img:hover {
+  background-size: 110%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/news-3.jpg');
+} */
 
 /* ------- QA ------- */
 #questions {
@@ -961,6 +993,10 @@ button {
   #news .card h4,
   #news .card #text {
     width: 690px;
+  }
+
+  #members .row {
+    justify-content: center;
   }
 
   #members h1 {
