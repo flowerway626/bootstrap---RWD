@@ -143,7 +143,8 @@ button {
 }
 
 .list a:hover,
-.list li:hover {
+.list li:hover,
+#sidebar li a:hover {
   color: #fff;
   background: #252525;
 }
@@ -252,6 +253,10 @@ button {
   color: #5c5c5c;
 }
 
+#sidebar li:hover a:not(#Home) {
+  color: #fff;
+}
+
 #sidebar ul:not(.list) {
   padding-left: 10px;
 }
@@ -278,15 +283,7 @@ button {
 
 #carousel1 .container {
   padding: 0;
-}
-
-#carousel1::after {
-  content: '';
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   background: rgba(0, 0, 0, 0.6);
 }
 
@@ -873,8 +870,11 @@ button {
 /* ------- QA ------- */
 #questions {
   text-align: center;
-  background: url('../images/questions.jpg') no-repeat center/cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/questions.jpg');
   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #questions #area {
@@ -973,6 +973,10 @@ button {
 }
 /* ------- RWD ------- */
 @media (min-width: 768px) {
+  #top .row {
+    width: 80%;
+  }
+
   #aboutUs #right #area {
     width: 680px;
   }
@@ -1037,6 +1041,10 @@ button {
 @media (min-width: 992px) {
   .row {
     display: flex;
+  }
+
+  #top .row {
+    width: 100%;
   }
 
   #top .col img {
