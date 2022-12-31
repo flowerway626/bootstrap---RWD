@@ -1044,7 +1044,7 @@ button {
   }
 
   #top .row {
-    width: 100%;
+    width: 95%;
   }
 
   #top .col img {
@@ -1073,7 +1073,8 @@ button {
   }
 
   #carousel1 #icons {
-    display: block;
+    display: inline-block;
+    width: 95%;
   }
 
   #carousel1 h1 {
@@ -1085,8 +1086,10 @@ button {
     padding: 100px 0;
   }
 
-  #carousel1 .swiper {
+  #carousel1 .swiper,
+  #carousel1 #icons {
     padding: 0;
+    width: 95%;
   }
 
   #carousel1 .swiper-button-prev,
