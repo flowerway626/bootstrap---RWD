@@ -739,7 +739,7 @@
         $(`#news .col:nth-child(${i + 1}) .img`).css(
           {
             'background-size': 'cover',
-            'background-image': `url('../images/news-${i + 1}.jpg')`
+            'background-image': `url('./images/news-${i + 1}.jpg')`
           }
         )
         $('#news .img span:not(#news .date span) ').eq(i).hide()
@@ -776,11 +776,9 @@
       } else {
         $('#carousel1').css('background-image', `url('./images/top-3.jpg')`)
       }
-      // console.log(swiper1.previousIndex)
     })
 
     const swiper2 = new Swiper('#swiper2', {
-      // Optional parameters
       direction: 'horizontal',
       loop: true,
       slidesPerView: 1,
@@ -839,10 +837,8 @@
     });
 
     const swiper4 = new Swiper('#swiper4', {
-      // Optional parameters
       direction: 'horizontal',
       loop: true,
-      // slidesPerView: 1,
       spaceBetween: 15,
       grabCursor: true,
       speed: 1000,

@@ -284,6 +284,9 @@ button {
 #carousel1 .container {
   padding: 0;
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   background: rgba(0, 0, 0, 0.6);
 }
 
@@ -1074,7 +1077,7 @@ button {
 
   #carousel1 #icons {
     display: inline-block;
-    width: 95%;
+    margin: auto;
   }
 
   #carousel1 h1 {
